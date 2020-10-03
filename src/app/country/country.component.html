@@ -1,1 +1,14 @@
-<p>{{ selected.name }}</p>
+<button (click)="send(selected.currencies[0].name)">Enviar</button>
+<button (click)="showJson(selected)">Mostrar País</button>
+
+<pre *ngIf="countryJson">{{ countryJson }}</pre>
+
+<hr>
+
+{{ total | currency: selected.currencies[0].symbol }}
+<br>
+{{ selected.currencies[0].name | uppercase }}
+<br>
+{{ birthday | date: "fullDate" | lowercase }}
+<br>
+<!--<pre>{{ selected | json }}</pre>-->
