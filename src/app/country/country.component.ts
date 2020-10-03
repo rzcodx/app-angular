@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import { Country } from '../interfaces'
+import { Country } from '@app/models'
 import * as countries from './../../assets/countries.json'
 
 @Component({
