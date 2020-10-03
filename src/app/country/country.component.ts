@@ -14,7 +14,6 @@ export class CountryComponent implements OnInit {
   countries: Country[]
   birthday = new Date()
   total = 123456.7890
-
   countryJson: string
 
   constructor(private uppperCasePipe: UpperCasePipe, private jsonPipe: JsonPipe) {

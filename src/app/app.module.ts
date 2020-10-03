@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
+import { FilesizePipe, EmptyPipe } from '@app/pipes'
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
@@ -14,7 +15,9 @@ import { CountryComponent } from './country/country.component'
     MenuComponent,
     OrderComponent,
     DishComponent,
-    CountryComponent
+    CountryComponent,
+    FilesizePipe,
+    EmptyPipe
   ],
   imports: [
     BrowserModule,
