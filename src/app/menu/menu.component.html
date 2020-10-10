@@ -5,6 +5,6 @@ Hola {{ name }}
 
 <ul>
   <li *ngFor="let dish of dishes" class="dishes">
-    <app-dish [dish]=dish (choose)="select($event)"></app-dish>
+    <app-dish *ngIf="dish.stock" [dish]=dish (choose)="select($event)"></app-dish>
   </li>
 </ul>
