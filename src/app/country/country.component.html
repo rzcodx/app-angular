@@ -4,9 +4,9 @@
 <hr>
 
 <button (click)="send(selected.currencies[0].name)">Enviar</button>
-<button (click)="showJson(selected)">Mostrar País</button>
+<button (click)="toggleJson()">{{ showJson | countryButton }}</button>
 
-<pre *ngIf="countryJson">{{ countryJson }}</pre>
+<pre *ngIf="showJson">{{ countryJson }}</pre>
 
 <hr>
 

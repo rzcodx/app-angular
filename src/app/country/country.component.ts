@@ -1,5 +1,5 @@
-import {JsonPipe, UpperCasePipe} from '@angular/common'
-import {Component, EventEmitter, OnInit, Output} from '@angular/core'
+import { JsonPipe, UpperCasePipe } from '@angular/common'
+import { Component, EventEmitter, OnInit, Output } from '@angular/core'
 import { Country } from '@app/models'
 import * as countriesJson from './../../assets/countries.json'
 
@@ -15,12 +15,14 @@ export class CountryComponent implements OnInit {
   birthday = new Date()
   total = 123456.7890
   countryJson: string
+  showJson: boolean
 
-  constructor(private uppperCasePipe: UpperCasePipe, private jsonPipe: JsonPipe) {
+  constructor(private upperCasePipe: UpperCasePipe, private jsonPipe: JsonPipe) {
     // this.upperCasePipe = new UpperCasePipe()
-    // this.selected = Object.values(countries).filter((country: Country) => (country.name = 'Peru'))[0]
-    // this.selected = countries.filter((country: Country) => (country.name = 'Peru'))[0]
-    this.selected = countriesJson[10]
+    this.selected = (countriesJson as any).default.filter((country: Country) => (country.name === 'Peru'))[0]
+    // this.selected = countries.filter((country: Country) => (country.name === 'Peru'))[0]
+    // this.selected = countriesJson[10]
+    this.countryJson = this.jsonPipe.transform(this.selected)
     console.log(this.selected)
   }
 
@@ -28,11 +30,11 @@ export class CountryComponent implements OnInit {
 
   send(name: string): void {
     console.log('Antes :::', name)
-    name = this.uppperCasePipe.transform(name)
+    name = this.upperCasePipe.transform(name)
     console.log('Después :::', name)
   }
 
-  showJson(country: Country): void {
-    this.countryJson = this.jsonPipe.transform(country)
+  toggleJson(): void {
+    this.showJson = !this.showJson
   }
 }
