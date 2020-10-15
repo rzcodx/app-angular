@@ -1,4 +1,4 @@
-import { Pipe, PipeTransform } from '@angular/core'
+import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'spicyMessage'
@@ -11,7 +11,7 @@ export class SpicyMessagePipe implements PipeTransform {
       2: 'Pica',
       3: 'Pica mucho',
       4: 'Muy picante'
-    }
-    return messages[value] ? messages[value] : 'No hay registro de picor'
+    };
+    return messages[value] ? messages[value] : 'No hay registro de picor';
   }
 }

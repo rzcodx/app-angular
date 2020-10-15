@@ -1,4 +1,4 @@
-import { Pipe, PipeTransform } from '@angular/core'
+import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'spicyColor'
@@ -11,7 +11,7 @@ export class SpicyColorPipe implements PipeTransform {
       2: 'blue',
       3: 'red',
       4: 'red'
-    }
-    return color[value] ? color[value] : ''
+    };
+    return color[value] ? color[value] : '';
   }
 }
