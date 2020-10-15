@@ -1,3 +1,30 @@
 <p>{{ name }}</p>
 <p>{{ amountOfIngredients }}</p>
+<!--<div [ngSwitch]="dish.spicy">-->
+<!--  <p *ngSwitchCase="0">-->
+<!--    <span [ngStyle]="{color: dish.spicy | spicyColor}">{{ dish.spicy | spicyMessage }}</span>-->
+<!--  </p>-->
+<!--  <p *ngSwitchCase="1">-->
+<!--    <span [ngStyle]="{color: dish.spicy | spicyColor}">{{ dish.spicy | spicyMessage }}</span>-->
+<!--  </p>-->
+<!--  <p *ngSwitchCase="2">-->
+<!--    <span [ngStyle]="{color: dish.spicy | spicyColor}">{{ dish.spicy | spicyMessage }}</span>-->
+<!--  </p>-->
+<!--  <p *ngSwitchCase="3">-->
+<!--    <span [ngStyle]="{color: dish.spicy | spicyColor}">{{ dish.spicy | spicyMessage }}</span>-->
+<!--  </p>-->
+<!--  <p *ngSwitchCase="4">-->
+<!--    <span [ngStyle]="{color: dish.spicy | spicyColor}">{{ dish.spicy | spicyMessage }}</span>-->
+<!--  </p>-->
+<!--  <p *ngSwitchDefault>-->
+<!--    <span [ngStyle]="{color: dish.spicy | spicyColor}">{{ dish.spicy | spicyMessage }}</span>-->
+<!--  </p>-->
+<!--</div>-->
+
+<div>
+  <p>
+    <span [ngStyle]="{color: dish.spicy | spicyColor}">{{ dish.spicy | spicyMessage }}</span>
+  </p>
+</div>
+
 <button (click)="notify(dish)">Agregar</button>

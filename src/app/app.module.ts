@@ -9,7 +9,10 @@ import { OrderComponent } from './order/order.component'
 import { DishComponent } from './dish/dish.component'
 import { CountryComponent } from './country/country.component'
 import { CountryButtonPipe } from './pipes/country-button.pipe'
-import { MenuMessagePipe } from './pipes/menu-message.pipe'
+import { MenuMessagePipe } from './pipes/menu-message.pipe';
+import { SpicyMessagePipe } from './pipes/spicy-message.pipe';
+import { SpicyColorPipe } from './pipes/spicy-color.pipe';
+import { BoxShadowDirective } from './directives/box-shadow.directive'
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { MenuMessagePipe } from './pipes/menu-message.pipe'
     FilesizePipe,
     EmptyPipe,
     CountryButtonPipe,
-    MenuMessagePipe
+    MenuMessagePipe,
+    SpicyMessagePipe,
+    SpicyColorPipe,
+    BoxShadowDirective
   ],
   imports: [
     BrowserModule,

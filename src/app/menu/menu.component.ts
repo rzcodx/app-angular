@@ -42,4 +42,9 @@ export class MenuComponent implements OnInit {
   select(dish: Dish): void {
     this.selected = dish.name
   }
+
+  show(stock: boolean): string {
+    return ''
+    // return stock ? '' : 'none'
+  }
 }

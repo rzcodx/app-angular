@@ -9,7 +9,8 @@
       { "name": "Choclo", "qty": 5 },
       { "name": "Culantro", "qty": 6 }
     ],
-    "stock": false
+    "stock": false,
+    "spicy": 0
   },
   {
     "name": "Escabeche de pollo",
@@ -20,7 +21,8 @@
       { "name": "Cebolla", "qty": 4 },
       { "name": "Ajos", "qty": 5 }
     ],
-    "stock": true
+    "stock": true,
+    "spicy": 1
   },
   {
     "name": "Chanfainita combinada",
@@ -29,7 +31,8 @@
       { "name": "Mote", "qty": 2 },
       { "name": "Arroz", "qty": 3 }
     ],
-    "stock": true
+    "stock": true,
+    "spicy": 2
   },
   {
     "name": "Ceviche",
@@ -39,7 +42,8 @@
       { "name": "Cebolla", "qty": 3 },
       { "name": "Sal", "qty": 4 }
     ],
-    "stock": true
+    "stock": true,
+    "spicy": 3
   },
   {
     "name": "Cau cau",
@@ -50,7 +54,8 @@
       { "name": "Zanahoria", "qty": 4 },
       { "name": "Arveja", "qty": 5 }
     ],
-    "stock": true
+    "stock": true,
+    "spicy": 4
   },
   {
     "name": "Pollo a la brasa",
@@ -58,7 +63,8 @@
       { "name": "Pollo", "qty": 1 },
       { "name": "Papa", "qty": 2 }
     ],
-    "stock": true
+    "stock": true,
+    "spicy": 0
   },
   {
     "name": "Tacu tacu",
@@ -67,7 +73,8 @@
       { "name": "Frijol", "qty": 2 },
       { "name": "Cebolla", "qty": 3 }
     ],
-    "stock": true
+    "stock": true,
+    "spicy": 1
   },
   {
     "name": "Tallarin rojo",
@@ -76,6 +83,7 @@
       { "name": "Pollo", "qty": 2 },
       { "name": "Tomate", "qty": 3 }
     ],
-    "stock": true
+    "stock": true,
+    "spicy": 8
   }
 ]

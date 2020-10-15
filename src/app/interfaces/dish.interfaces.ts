@@ -1,7 +1,8 @@
 export interface Dish {
   name: string,
   ingredients: Ingredient[],
-  stock: boolean
+  stock: boolean,
+  spicy: number
 }
 
 export interface Ingredient {
