@@ -3,6 +3,7 @@ export interface Dish {
   ingredients: Ingredient[];
   stock: boolean;
   spicy: number;
+  price: number;
 }
 
 export interface Ingredient {

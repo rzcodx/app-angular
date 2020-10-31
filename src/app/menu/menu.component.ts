@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Customer, Dish } from '../interfaces';
 import * as dishesJson from './../../assets/dishes.json';
+import { MenuService } from '../utils/menu.service';
 
 @Component({
   selector: 'app-menu',
@@ -11,18 +12,11 @@ export class MenuComponent implements OnInit {
   name = 'Raul';
 
   dish: Dish;
-  customer: Customer;
   selected = '';
 
   dishes: Dish[];
 
-  constructor() {
-    this.customer = {
-      name: 'Juan',
-      level: 'vip',
-      category: 'main'
-    };
-
+  constructor(public menuService: MenuService) {
     this.dishes = (dishesJson as any).default;
     this.listDishes();
   }
@@ -41,10 +35,19 @@ export class MenuComponent implements OnInit {
 
   select(dish: Dish): void {
     this.selected = dish.name;
+    this.menuService.addDish(dish);
   }
 
   show(stock: boolean): string {
     return '';
     // return stock ? '' : 'none'
+  }
+
+  send(name: string): void {
+    this.menuService.customer = {
+      name,
+      level: 'new',
+      category: 'main'
+    };
   }
 }

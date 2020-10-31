@@ -3,6 +3,32 @@
 
 <hr>
 
+<input type="text" [(ngModel)]="code" value="code">
+<button (click)="getInfo(code)">get Info</button>
+
+<div *ngIf="(countriesService.selectedCountry$ | async) as country">
+  <pre>{{ country | json }}</pre>
+</div>
+
+<div *ngIf="(countriesService.error$ | async) as error">
+  <h2>No hay país con el código {{ code }}</h2>
+</div>
+
+<hr>
+
+<button (click)="addPost()">Post</button>
+<button (click)="putPost()">Put</button>
+<button (click)="patchPost()">Patch</button>
+<button (click)="deletePost()">Delete</button>
+
+<div *ngIf="postResult.length > 0">
+  {{ postResult }}
+</div>
+
+<hr>
+
+
+
 <button (click)="send(selected.currencies[0].name)">Enviar</button>
 <button (click)="toggleJson()">{{ showJson | countryButton }}</button>
 
@@ -17,3 +43,8 @@
 {{ birthday | date: "fullDate" | lowercase }}
 <br>
 <!--<pre>{{ selected | json }}</pre>-->
+
+<hr>
+
+<!--<app-detail></app-detail>-->
+<app-detail></app-detail>

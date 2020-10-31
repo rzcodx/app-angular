@@ -13,6 +13,9 @@ import { MenuMessagePipe } from './pipes/menu-message.pipe';
 import { SpicyMessagePipe } from './pipes/spicy-message.pipe';
 import { SpicyColorPipe } from './pipes/spicy-color.pipe';
 import { BoxShadowDirective } from './directives/box-shadow.directive';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { DetailComponent } from './country/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -27,11 +30,14 @@ import { BoxShadowDirective } from './directives/box-shadow.directive';
     MenuMessagePipe,
     SpicyMessagePipe,
     SpicyColorPipe,
-    BoxShadowDirective
+    BoxShadowDirective,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

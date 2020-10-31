@@ -57,3 +57,10 @@ export interface Currency {
   name: string;
   symbol: string;
 }
+
+export interface Post {
+  id?: number;
+  userID: number;
+  title: string;
+  body?: string;
+}

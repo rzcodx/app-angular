@@ -1,26 +1,37 @@
-<p [appBoxShadow]="false"
-   [appBoxShadowX]="'12px'"
-   [appBoxShadowY]="'10px'"
-   [appBoxShadowBlur]="'20px'">menu works!</p>
+<!--<p [appBoxShadow]="false"-->
+<!--   [appBoxShadowX]="'12px'"-->
+<!--   [appBoxShadowY]="'10px'"-->
+<!--   [appBoxShadowBlur]="'20px'">menu works!</p>-->
 Hola {{ name }}
+
+<input type="text" name="name" [(ngModel)]="name">
+<ng-container *ngIf="menuService.customer">
+  {{ this.menuService.customer.name }}
+</ng-container>
+
+<ng-container *ngIf="menuService.total > 0">
+  {{ this.menuService.total }}
+</ng-container>
+
+<button (click)="send(name)">Enviar pedido</button>
 
 <h2 *ngIf="selected.length > 0">{{ selected | menuMessage }}</h2>
 
-<ul>
-  <li *ngFor="let dish of dishes"
-      [appBoxShadow]="dish.stock"
-      [appBoxShadowX]="'12px'"
-      [appBoxShadowY]="'10px'"
-      [appBoxShadowBlur]="'30px'"
-      [ngStyle]="{display: show(dish.stock)}">
-    <app-dish [dish]=dish (choose)="select($event)"></app-dish>
-  </li>
-</ul>
-
 <!--<ul>-->
-<!--  <ng-container *ngFor="let dish of dishes">-->
-<!--    <li *ngIf="dish.stock" class="dishes">-->
-<!--      <app-dish [dish]=dish (choose)="select($event)"></app-dish>-->
-<!--    </li>-->
-<!--  </ng-container>-->
+<!--  <li *ngFor="let dish of dishes"-->
+<!--      [appBoxShadow]="dish.stock"-->
+<!--      [appBoxShadowX]="'12px'"-->
+<!--      [appBoxShadowY]="'10px'"-->
+<!--      [appBoxShadowBlur]="'30px'"-->
+<!--      [ngStyle]="{display: show(dish.stock)}">-->
+<!--    <app-dish [dish]=dish (choose)="select($event)"></app-dish>-->
+<!--  </li>-->
 <!--</ul>-->
+
+<ul>
+  <ng-container *ngFor="let dish of dishes">
+    <li *ngIf="dish.stock" class="dishes">
+      <app-dish [dish]=dish (choose)="select($event)"></app-dish>
+    </li>
+  </ng-container>
+</ul>

@@ -5,6 +5,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class CountryButtonPipe implements PipeTransform {
   transform(value: boolean, ...args: unknown[]): unknown {
-    return value ? 'Ocultar países' : 'Mostrar países';
+    return value ? 'Ocultar país' : 'Mostrar país';
   }
 }
